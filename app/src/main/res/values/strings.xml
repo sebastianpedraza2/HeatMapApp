@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PruebaTecnicaSebastianPedraza</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="slabcode_s_a_s">Slabcode S.A.S</string>
+    <string name="max">More</string>
+    <string name="avg">Avg</string>
+    <string name="min">Fewer</string>
+</resources>

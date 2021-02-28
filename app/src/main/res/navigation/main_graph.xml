@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/homeScreenFragment">
+
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="com.example.pruebatecnicasebastianpedraza.ui.HomeScreenFragment"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreenFragment_to_sortedProejctsFragment"
+            app:destination="@id/sortedProejctsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sortedProejctsFragment"
+        android:name="com.example.pruebatecnicasebastianpedraza.ui.SortedProjectsFragment"
+        android:label="SortedProejctsFragment" >
+        <argument
+            android:name="attributeToSort"
+            app:argType="string" />
+    </fragment>
+</navigation>

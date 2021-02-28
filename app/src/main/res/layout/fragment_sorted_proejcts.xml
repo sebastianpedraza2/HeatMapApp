@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.HomeScreenFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/slab_code_wall"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/slab_code_wall"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutNames"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/res_card"
+                android:elevation="20dp"
+                android:translationY="-50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/slab_code_wall"
+                app:layout_constraintVertical_bias="0"
+                app:layout_constraintWidth_percent=".6">
+
+                <TextView
+                    android:id="@+id/txt_company_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="25dp"
+                    android:text="@string/slabcode_s_a_s"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="15dp"
+                    android:background='@color/black'
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_company_name" />
+
+                <TextView
+                    android:id="@+id/txt_colors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="25dp"
+                    android:text="Colors"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line" />
+
+                <ImageView
+                    android:id="@+id/red_scale"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+
+
+                    android:layout_marginTop="10dp"
+                    android:background='@color/max_red'
+                    app:layout_constraintBottom_toTopOf="@+id/txt_max"
+                    app:layout_constraintEnd_toStartOf="@+id/avg_scale"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_colors" />
+
+
+                <TextView
+                    android:id="@+id/txt_max"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/max"
+                    app:layout_constraintEnd_toEndOf="@+id/red_scale"
+                    app:layout_constraintStart_toStartOf="@+id/red_scale"
+                    app:layout_constraintTop_toBottomOf="@+id/red_scale" />
+
+                <ImageView
+                    android:id="@+id/avg_scale"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+
+                    android:background='@color/mid_grey'
+                    app:layout_constraintBottom_toTopOf="@+id/txt_mid"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_colors" />
+
+
+                <TextView
+                    android:id="@+id/txt_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/avg"
+                    app:layout_constraintEnd_toEndOf="@+id/avg_scale"
+                    app:layout_constraintStart_toStartOf="@+id/avg_scale"
+                    app:layout_constraintTop_toBottomOf="@+id/avg_scale" />
+
+                <ImageView
+                    android:id="@+id/min_scale"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+
+                    android:background='@color/min_blue'
+                    app:layout_constraintBottom_toTopOf="@+id/txt_mid"
+                    app:layout_constraintStart_toEndOf="@+id/avg_scale"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_colors" />
+
+
+                <TextView
+                    android:id="@+id/txt_mid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:text="@string/min"
+                    app:layout_constraintEnd_toEndOf="@+id/min_scale"
+                    app:layout_constraintStart_toStartOf="@+id/min_scale"
+                    app:layout_constraintTop_toBottomOf="@+id/min_scale" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+<TextView
+    tools:text="Attribute Name"
+    android:textSize="19sp"
+    android:textStyle="bold"
+    android:id="@+id/txt_attribute"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutNames"
+    app:layout_constraintVertical_bias="0.0"
+    android:translationY="-28dp"
+    />
+
+
+            <RelativeLayout
+                android:id="@+id/progress_main_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_attribute"
+                app:layout_constraintVertical_bias=".4">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+
+                    />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_projects"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:translationY="-10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_attribute"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintWidth_percent=".9" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
